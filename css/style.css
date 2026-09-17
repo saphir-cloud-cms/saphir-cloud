@@ -1,10 +1,17 @@
+/* ĐĂNG KÝ PHÔNG CHỮ */
+@font-face {
+    font-family: 'Blode Starkly';
+    src: url('../assets/fonts/BlodeStarkly.woff2') format('woff2'); /* Thay đổi đường dẫn file font nếu bạn lưu ở thư mục khác */
+    font-weight: normal;
+    font-style: normal;
+}
+
 :root {
     --bg-color: #0b131d;
     --card-bg: rgba(20, 30, 48, 0.75);
     --border-color: rgba(255, 255, 255, 0.2);
     --text-color: #e2e8f0;
     --text-muted: #94a3b8;
-    --accent-color: #cbd5e1;
 }
 
 * {
@@ -20,14 +27,21 @@ body {
     background-attachment: fixed;
     background-position: center;
     color: var(--text-color);
-    font-family: 'Plus Jakarta Sans', sans-serif;
+    /* Phông chữ mô tả chi tiết: Be Vietnam Pro */
+    font-family: 'Be Vietnam Pro', sans-serif;
     line-height: 1.6;
     scroll-behavior: smooth;
     padding-top: 60px;
 }
 
-h1, h2, h3, h4, .brand-title, .card-text h2, .sample-title, .nav-logo, .sample-cat-title {
-    font-family: 'Cinzel', serif;
+/* TIÊU ĐỀ LỚN: Phông Blode Starkly */
+h1, .brand-title, .card-text h2 {
+    font-family: 'Blode Starkly', 'Cinzel', serif;
+}
+
+/* TIÊU ĐỀ PHỤ: Phông Faustina */
+h2, h3, .section-heading, .about-title {
+    font-family: 'Faustina', serif;
 }
 
 /* THANH MENU CỐ ĐỊNH */
@@ -56,6 +70,7 @@ h1, h2, h3, h4, .brand-title, .card-text h2, .sample-title, .nav-logo, .sample-c
     font-weight: 700;
     text-decoration: none;
     font-size: 1.1rem;
+    font-family: 'Blode Starkly', sans-serif;
 }
 
 .nav-menu {
@@ -77,26 +92,34 @@ h1, h2, h3, h4, .brand-title, .card-text h2, .sample-title, .nav-logo, .sample-c
 
 /* CONTAINER */
 .container {
-    max-width: 800px;
+    max-width: 850px;
     margin: 0 auto;
     padding: 0 20px;
 }
 
 .section-padding {
-    padding: 35px 0;
+    padding: 40px 0;
 }
 
-/* HERO SECTION */
+/* HERO SECTION & AVATAR BÊN TRÁI */
 .hero-section {
-    text-align: center;
-    padding: 40px 20px 20px;
+    padding: 40px 20px;
+    border-bottom: 1px solid var(--border-color);
+    margin-bottom: 30px;
+}
+
+.hero-top-row {
+    display: flex;
+    align-items: flex-start;
+    gap: 25px;
+    margin-bottom: 30px;
 }
 
 .avatar-container {
-    width: 140px;
-    height: 140px;
-    margin: 0 auto 20px;
-    border-radius: 20px;
+    width: 120px;
+    height: 120px;
+    flex-shrink: 0;
+    border-radius: 16px;
     overflow: hidden;
     border: 2px solid var(--border-color);
     box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
@@ -108,60 +131,83 @@ h1, h2, h3, h4, .brand-title, .card-text h2, .sample-title, .nav-logo, .sample-c
     object-fit: cover;
 }
 
+.hero-header-text {
+    flex-grow: 1;
+}
+
 .brand-title {
-    font-size: 2.5rem;
+    font-size: 2.2rem;
     font-weight: 700;
     margin-bottom: 10px;
     letter-spacing: 1px;
 }
 
-.bio-text {
-    color: var(--text-muted);
+.intro-links {
     font-size: 0.95rem;
-    max-width: 500px;
-    margin: 0 auto 25px;
+    color: var(--text-muted);
+    margin-bottom: 10px;
 }
 
-.social-buttons {
-    display: flex;
-    justify-content: center;
-    gap: 15px;
-    flex-wrap: wrap;
+.intro-links a {
+    color: #60a5fa;
+    text-decoration: underline;
 }
 
-.btn {
-    padding: 10px 20px;
-    border-radius: 30px;
-    text-decoration: none;
-    font-weight: 500;
-    font-size: 0.9rem;
-    transition: all 0.3s ease;
+.highlight-note {
+    font-size: 0.85rem;
+    color: #fbbf24;
+    font-style: italic;
 }
 
-.primary-btn {
-    background-color: #ffffff;
-    color: #0b131d;
-}
-
-.primary-btn:hover {
-    background-color: #cbd5e1;
-}
-
-.secondary-btn {
-    background-color: rgba(255, 255, 255, 0.1);
-    color: #ffffff;
+/* ABOUT ME CHIA 3 CỘT */
+.about-me-section {
+    background: rgba(20, 30, 48, 0.5);
     border: 1px solid var(--border-color);
+    border-radius: 16px;
+    padding: 20px;
+    backdrop-filter: blur(10px);
 }
 
-.secondary-btn:hover {
-    background-color: rgba(255, 255, 255, 0.2);
+.about-title {
+    font-size: 1.3rem;
+    margin-bottom: 15px;
+    letter-spacing: 1px;
 }
 
-/* CARDS GRID */
+.about-grid-3 {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.about-column ul {
+    list-style-type: disc;
+    padding-left: 18px;
+    font-size: 0.88rem;
+    color: var(--text-muted);
+    line-height: 1.5;
+}
+
+.about-column li {
+    margin-bottom: 8px;
+}
+
+@media (max-width: 768px) {
+    .hero-top-row {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    .about-grid-3 {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* CARDS GRID (6 Ô ĐỀ MỤC) */
 .cards-grid {
     display: flex;
     flex-direction: column;
-    gap: 25px;
+    gap: 20px;
 }
 
 .card-item, .card-link {
@@ -177,117 +223,80 @@ h1, h2, h3, h4, .brand-title, .card-text h2, .sample-title, .nav-logo, .sample-c
     color: inherit;
 }
 
-.card-item:hover, .card-link:hover {
+.card-item:hover {
     transform: translateY(-4px);
     border-color: rgba(255, 255, 255, 0.5);
 }
 
 .card-image-box {
-    height: 180px;
+    height: 160px;
     overflow: hidden;
+    background-size: cover;
+    background-position: center;
 }
 
-.card-image-box img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    transition: transform 0.3s ease;
-}
-
-.card-item:hover .card-image-box img {
-    transform: scale(1.03);
-}
+/* Định nghĩa ảnh nền cho các thẻ card (Cập nhật tên file thực tế của bạn tại đây) */
+.water-lily-1 { background-image: url('../assets/images/water-lily-1.jpg'); }
+.water-lily-2 { background-image: url('../assets/images/water-lily-2.jpg'); }
+.water-lily-3 { background-image: url('../assets/images/water-lily-3.jpg'); }
 
 .card-text {
-    padding: 20px;
+    padding: 18px;
 }
 
 .card-text h2 {
-    font-size: 1.4rem;
+    font-size: 1.3rem;
     margin-bottom: 6px;
 }
 
 .card-text p {
     color: var(--text-muted);
     font-size: 0.9rem;
-    margin-bottom: 8px;
 }
 
-.update-time {
-    font-size: 0.8rem;
-    color: #64748b;
-}
-
-/* SECTIONS & SAMPLES */
-.section-heading {
-    font-size: 1.8rem;
-    margin-bottom: 20px;
-    border-bottom: 1px solid var(--border-color);
-    padding-bottom: 10px;
-}
-
-.sample-cat-title {
-    font-size: 1.3rem;
-    margin-bottom: 12px;
-    color: var(--accent-color);
-    display: flex;
-    align-items: center;
-    gap: 10px;
-}
-
-.badge-age {
-    font-size: 0.75rem;
-    background: rgba(239, 68, 68, 0.2);
-    border: 1px solid rgba(239, 68, 68, 0.4);
-    color: #fca5a5;
-    padding: 2px 8px;
-    border-radius: 10px;
-    font-family: 'Plus Jakarta Sans', sans-serif;
-}
-
-.sample-box, .workflow-box {
+/* CÁC Ô CON CỦA SAMPLE */
+.card-item-group {
     background: var(--card-bg);
     border: 1px solid var(--border-color);
     border-radius: 16px;
-    padding: 24px;
-    margin-bottom: 20px;
+    padding: 15px;
     backdrop-filter: blur(10px);
 }
 
-.sample-title {
-    font-size: 1.2rem;
-    font-weight: 700;
-    margin-bottom: 6px;
+.card-item-group .card-item {
+    border: none;
+    background: transparent;
 }
 
-.sample-meta {
-    font-size: 0.9rem;
-    color: var(--text-muted);
-}
-
-.sample-tag {
-    font-size: 0.9rem;
-    color: var(--accent-color);
-    margin: 8px 0;
-}
-
-.sample-capture {
-    margin-top: 12px;
-    padding-top: 12px;
+.sample-sub-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    margin-top: 10px;
+    padding-top: 10px;
     border-top: 1px dashed var(--border-color);
-    font-style: italic;
-    color: #cbd5e1;
-    font-size: 0.9rem;
 }
 
-.workflow-heading {
-    font-size: 1.1rem;
-    margin-bottom: 10px;
+.sub-card {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid var(--border-color);
+    border-radius: 10px;
+    text-align: center;
+    padding: 10px;
+    font-size: 0.85rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background 0.2s ease;
 }
 
+.sub-card:hover {
+    background: rgba(255, 255, 255, 0.15);
+}
+
+/* FOOTER */
 footer {
     text-align: center;
-    padding: 40px 20px;
+    padding: 30px 20px;
     color: #64748b;
     font-size: 0.85rem;
     border-top: 1px solid rgba(255, 255, 255, 0.05);

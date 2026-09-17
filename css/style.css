@@ -1,7 +1,7 @@
 /* ĐĂNG KÝ PHÔNG CHỮ */
 @font-face {
     font-family: 'Blode Starkly';
-    src: url('../assets/fonts/BlodeStarkly.woff2') format('woff2'); /* Thay đổi đường dẫn file font nếu bạn lưu ở thư mục khác */
+    src: url('assets/blode-starkly.zip') format('woff2'); /* Thay đổi đường dẫn file font nếu bạn lưu ở thư mục khác */
     font-weight: normal;
     font-style: normal;
 }
@@ -22,7 +22,7 @@
 
 body {
     background-color: var(--bg-color);
-    background-image: linear-gradient(rgba(11, 19, 29, 0.85), rgba(11, 19, 29, 0.95)), url('../assets/images/background.jpg');
+    background-image: linear-gradient(rgba(11, 19, 29, 0.85), rgba(11, 19, 29, 0.95)), url('assets/images/background.jpg');
     background-size: cover;
     background-attachment: fixed;
     background-position: center;
@@ -236,7 +236,7 @@ h2, h3, .section-heading, .about-title {
 }
 
 /* Định nghĩa ảnh nền cho các thẻ card (Cập nhật tên file thực tế của bạn tại đây) */
-.water-lily-1 { background-image: url('../assets/images/water-lily-1.jpg'); }
+.water-lily-1 { background-image: url('assets/images/water-lily-1.jpg'); }
 .water-lily-2 { background-image: url('../assets/images/water-lily-2.jpg'); }
 .water-lily-3 { background-image: url('../assets/images/water-lily-3.jpg'); }
 

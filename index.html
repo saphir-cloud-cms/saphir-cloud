@@ -79,66 +79,81 @@
             </div>
         </section>
 
-<!-- KHU VỰC 6 Ô CHỮ NHẬT ĐỨNG -->
-<section id="services" class="section" style="width: 100%; max-width: 1200px; margin: 0 auto; padding: 40px 20px;">
-    <h2 style="font-size: 2rem; color: #fff; margin-bottom: 1.5rem; text-align: left; font-family: 'Cinzel', serif;">Dịch vụ & Thông tin</h2>
-    
-    <div class="services-grid">
+<section id="menu-cards" class="container section-padding">
+    <div class="cards-grid">
+        
         <!-- Ô 1: Price-list -->
-        <div class="service-card">
-            <div>
-                <h3>Price-list</h3>
-                <p>Bảng giá chi tiết các dịch vụ commission viết truyện, phân chia theo từng gói và yêu cầu cụ thể.</p>
+        <div class="card-item" onclick="scrollToSection('pricing')">
+            <div class="card-image-box">
+                <img src="assets/images/price-list.jpg" alt="Price-list">
             </div>
-            <a href="#price-list" class="btn" style="margin-top: 15px; display: inline-block; color: #fbbf24; text-decoration: none; font-weight: bold;">Xem chi tiết →</a>
+            <div class="card-text">
+                <h2>Price-list</h2>
+                <p>Gồm 3 gói: Viết theo brief, Viết nhanh, Gacha. Liên hệ nếu muốn custom hoặc điều chỉnh.</p>
+                <span class="update-time">Cập nhật gần đây: 07.2026</span>
+            </div>
         </div>
 
         <!-- Ô 2: Term of Service -->
-        <div class="service-card">
-            <div>
-                <h3>Term of Service</h3>
-                <p>Quy định, điều khoản, quyền lợi và trách nhiệm khi tiến hành giao dịch commission.</p>
+        <a href="https://docs.google.com/document/d/LINK_DOCS_TOS_CUA_BAN" target="_blank" class="card-item card-link">
+            <div class="card-image-box">
+                <img src="assets/images/tos.jpg" alt="Term of Service">
             </div>
-            <a href="#tos" class="btn" style="margin-top: 15px; display: inline-block; color: #fbbf24; text-decoration: none; font-weight: bold;">Đọc kỹ →</a>
-        </div>
+            <div class="card-text">
+                <h2>Term of service</h2>
+                <p>Bắt buộc đọc để biết quyền lợi, nghĩa vụ của hai bên.</p>
+                <span class="update-time">Cập nhật gần đây: 07.2026</span>
+            </div>
+        </a>
 
-<!-- 3. Sample (Chuyển hướng sang trang con sample.html) -->
-<a href="sample.html" class="card-item card-link service-card">
-    <div class="card-image-box">
-        <img src="assets/images/sample-menu.jpg" alt="Samples">
-    </div>
-    <div class="card-text">
-        <h2>Samples</h2>
-        <p>sfw, nsfw (xác nhận đủ tuổi), build (plot, oc, vv.)</p>
-        <span class="update-time">Cập nhật gần đây: 07.2026</span>
-    </div>
-</a>
+        <!-- Ô 3: Sample (Chuyển hướng sang trang con hoặc neo tới phần sample) -->
+        <a href="sample.html" class="card-item card-link">
+            <div class="card-image-box">
+                <img src="assets/images/sample-menu.jpg" alt="Sample">
+            </div>
+            <div class="card-text">
+                <h2>Sample</h2>
+                <p>Đọc tag để tìm được thứ bạn muốn đọc và tránh dẫm mìn.</p>
+                <span class="update-time">Cập nhật gần đây: 07.2026</span>
+            </div>
+        </a>
 
         <!-- Ô 4: Work-flow -->
-        <div class="service-card">
-            <div>
-                <h3>Work-flow</h3>
-                <p>Các bước tiến hành từ lúc nhận đơn, lên ý tưởng, duyệt khung sườn cho đến khi hoàn thiện sản phẩm.</p>
+        <div class="card-item" onclick="scrollToSection('workflow')">
+            <div class="card-image-box">
+                <img src="assets/images/workflow.jpg" alt="Work-flow">
             </div>
-            <a href="#workflow" class="btn" style="margin-top: 15px; display: inline-block; color: #fbbf24; text-decoration: none; font-weight: bold;">Xem quy trình →</a>
+            <div class="card-text">
+                <h2>Work-flow</h2>
+                <p>Quy trình từ lúc trao đổi brief, duyệt draft, cọc cho đến khi hoàn thiện sản phẩm.</p>
+                <span class="update-time">Cập nhật gần đây: 07.2026</span>
+            </div>
         </div>
 
-        <!-- Ô 5: Event / Sale -->
-        <div class="service-card">
-            <div>
-                <h3>Event - Sale</h3>
+        <!-- Ô 5: Event - Sale -->
+        <div class="card-item" onclick="scrollToSection('events')">
+            <div class="card-image-box">
+                <img src="assets/images/event.jpg" alt="Event - Sale">
             </div>
-            <a href="#event" class="btn" style="margin-top: 15px; display: inline-block; color: #fbbf24; text-decoration: none; font-weight: bold;">Cập nhật →</a>
+            <div class="card-text">
+                <h2>Event - Sale</h2>
+                <p>Các chương trình ưu đãi, tri ân commission và giảm giá khi giới thiệu bạn mới.</p>
+                <span class="update-time">Cập nhật gần đây: 07.2026</span>
+            </div>
         </div>
 
         <!-- Ô 6: Feedback -->
-        <div class="service-card">
-            <div>
-                <h3>Feedback</h3>
-                <p>Đánh giá, nhận xét thực tế từ những khách hàng đã từng sử dụng dịch vụ ủy thác.</p>
+        <div class="card-item" onclick="scrollToSection('feedback')">
+            <div class="card-image-box">
+                <img src="assets/images/feedback.jpg" alt="Feedback">
             </div>
-            <a href="#feedback" class="btn" style="margin-top: 15px; display: inline-block; color: #fbbf24; text-decoration: none; font-weight: bold;">Xem phản hồi →</a>
+            <div class="card-text">
+                <h2>Feedback</h2>
+                <p>Nơi lưu giữ những đánh giá và cảm nhận thực tế từ khách hàng tuyệt vời.</p>
+                <span class="update-time">Cập nhật gần đây: 07.2026</span>
+            </div>
         </div>
+
     </div>
 </section>
 

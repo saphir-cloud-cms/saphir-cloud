@@ -1,7 +1,7 @@
 /* ĐĂNG KÝ PHÔNG CHỮ */
 @font-face {
     font-family: 'Blode Starkly';
-    src: url('assets/fonts/Blodestarkly-Regular.ttf') format('woff2'); /* Thay đổi đường dẫn file font nếu bạn lưu ở thư mục khác */
+    src: url('assets/fonts/Blodestarkly-Regular.ttf') format('truetype'); /* Thay đổi đường dẫn file font nếu bạn lưu ở thư mục khác */
     font-weight: normal;
     font-style: normal;
 }

@@ -131,7 +131,7 @@ h2, h3, .section-heading, .about-title {
 /* HERO SECTION & AVATAR BÊN TRÁI */
 .hero-section {
     padding: 40px 20px;
-    border-bottom: 1px solid var(--border-color);
+    border-bottom: none;
     margin-bottom: 30px;
 }
 
